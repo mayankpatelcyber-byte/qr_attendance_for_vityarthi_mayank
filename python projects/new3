@@ -1,0 +1,13 @@
+import pandas as pd
+student=[]
+for i in range (0,101):
+    student.append({"reg_no":f"2026cs{1000 +i}",
+                    "name": f"student{i}",
+                    "phone_no":f"98765{i:05d}",
+                    "status": "absent"})
+    df = pd.DataFrame(student)
+df.to_csv("students.csv", index=False)
+print("Success: Created 'students.csv' with 100 records.")
+
+
+
